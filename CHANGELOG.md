@@ -1,5 +1,6 @@
 
-## 1.4.0 (2017-08-??)
+## 1.4.0 (2017-08-26)
+* Adopted HtmlAgilityPack as HTML parse engine.
 * Improved poriority measure function.
 * Modified to warn before overwriting existing sitemaps.
 * Modified patterns to match paths instead of URIs.
