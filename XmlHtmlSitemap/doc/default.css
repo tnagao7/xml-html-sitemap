@@ -1,44 +1,44 @@
 ﻿
 body {
-	font-family: Verdana, Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	margin: 0;
-	padding: 0;
-	line-height: 1.6em;
-	text-align: center;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6em;
+    text-align: center;
 }
 
 div#container {
-	margin: 0 auto;
-	padding: 0 15px;
-	width: 660px;
-	text-align: left;
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 660px;
+    text-align: left;
 }
 
 header {
-	margin: 0;
-	padding: 20px 0 0;
+    margin: 0;
+    padding: 20px 0 0;
 }
 
 article {
-	margin: 0;
-	padding: 5px 0 10px;
+    margin: 0;
+    padding: 5px 0 10px;
 }
 
 footer {
-	margin: 2em 0;
-	padding: 5px 0 10px 0;
-	text-align: center;
-	border-top: solid 1px #aaa;
-	font-size: 80%;
+    margin: 2em 0;
+    padding: 5px 0 10px 0;
+    text-align: center;
+    border-top: solid 1px #aaa;
+    font-size: 80%;
 }
 
 h1 {
-	margin: 20px 0 0 0;
-	padding: 10px 0 5px 0;
-	line-height: 2em;
-	font-size: 160%;
-	border-bottom: solid 1px #aaa;
+    margin: 20px 0 0 0;
+    padding: 10px 0 5px 0;
+    line-height: 2em;
+    font-size: 160%;
+    border-bottom: solid 1px #aaa;
 }
 
 h2 {
@@ -51,26 +51,26 @@ h3 {
 }
 
 ul {
-	margin: 1.2em 0;
-	padding-left: 25px;
+    margin: 1.2em 0;
+    padding-left: 25px;
 }
 
 a:link {
-	color: #46a;
-	text-decoration: none;
+    color: #46a;
+    text-decoration: none;
 }
 
 a:visited {
-	color: #666;
-	text-decoration: none;
+    color: #666;
+    text-decoration: none;
 }
 
 a:active {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 table {
@@ -94,8 +94,8 @@ code {
 }
 
 @media print {
-	
-	div#container {
-		width: auto;
-	}
+
+    div#container {
+        width: auto;
+    }
 }
