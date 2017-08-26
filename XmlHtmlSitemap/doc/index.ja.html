@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="default.css">
+    <title>XML&amp;HTML Sitemap ヘルプ</title>
+</head>
+<body>
+
+    <div id="container">
+
+        <header>
+            <h1>XML&amp;HTML Sitemap ヘルプ</h1>
+        </header>
+
+        <article>
+            <h2>目次</h2>
+
+            <ol>
+                <li><a href="#overview">概要</a></li>
+                <li><a href="#features">特徴</a></li>
+                <li><a href="#usage">使い方</a></li>
+                <li><a href="#details">各項目の詳細</a></li>
+                <li><a href="#templates">テンプレート</a></li>
+            </ol>
+
+            <h2 id="overview">概要</h2>
+
+            <p>
+                XML&amp;HTML Sitemap は、簡単な操作で XML サイトマップと
+                HTML サイトマップを同時生成できる Windows アプリケーションです。
+            </p>
+
+            <p>
+                生成される XML サイトマップ (sitemap.xml) は
+                <a href="https://www.sitemaps.org/protocol.html">Sitemaps XML format</a> 規格に準拠しており、
+                Google ウェブマスターツールなどのサービスにそのまま登録できます。
+                HTML サイトマップ (sitemap.html) は、自由に改変して、ご自身のウェブサイトで公開することができます。
+            </p>
+
+            <h2 id="features">特徴</h2>
+
+            <ul>
+                <li>ローカルファイルからのサイトマップ生成が可能</li>
+                <li>HTML サイトマップはテンプレートを自由に改変可能</li>
+            </ul>
+
+            <h2 id="usage">使い方</h2>
+
+            <p>主な操作は次のメインウィンドウから行います。</p>
+
+            <img src="img/main-window.ja.png" alt="screen shot" />
+
+            <h3>基本的な使い方</h3>
+
+            <p>基本的な使い方は次の通りです。</p>
+
+            <ol>
+                <li>[URL] テキストボックスにサイトの URL を指定します。</li>
+                <li>[保存先] テキストボックスにサイトマップを保存するフォルダを指定します。</li>
+                <li>
+                    次のチェックボックスにチェックを入れます。
+                    <ol>
+                        <li>[sitemap.xml を作成する]: XML サイトマップを作成する場合</li>
+                        <li>[sitemap.html を作成する]: HTML サイトマップを作成する場合</li>
+                    </ol>
+                </li>
+                <li>[実行] ボタンを押すと、サイトマップの生成が実行されます。</li>
+            </ol>
+
+            <h3>ローカルファイルからのサイトマップ生成</h3>
+
+            <p>
+                [ローカルファイルから作成] チェックボックスをオンにすると、
+                ローカルファイルからのサイトマップ生成が行われます。
+                これにより、実際のサイトにアクセスすることなくサイトマップを生成できます。
+                サイトマップに記載されるアドレスは、ローカルファイルの場所を、
+                [URL] テキストボックスに指定した URL を基準とするアドレスに読み替えたものとなります。
+            </p>
+
+            <h2 id="details">各項目の詳細</h2>
+
+            <p>メインウィンドウで設定が可能な項目について詳しく説明します。</p>
+
+            <h3>基本設定</h3>
+
+            <ul>
+                <li>[URL]: サイトマップを作成するサイトの URL を指定します。<code>http(s)://</code> から始めてください。</li>
+                <li>[除外]: サイトマップから除外するファイルやディレクトリをパターンで指定します（詳細は後述）。</li>
+                <li>[エンコーディング]: サイト上のウェブページのエンコーディングを指定します。</li>
+                <li>[保存先]: サイトマップの保存先を指定します。</li>
+            </ul>
+
+            <p>
+                上述の [除外] テキストボックスに指定するパターンには、ワイルドカードが利用できます。
+                ワイルドカード <code>*</code> は任意の文字列を、<code>?</code> は任意の文字を表します。
+                複数のパターンを指定するには、それぞれを <code>;</code> で区切って記述します。
+            </p>
+
+            <p>パターンの例を次に示します。サイト http://example.com に対してサイトマップを生成する場合を説明します。</p>
+
+            <table>
+                <tr><th>パターン</th><th>説明</th></tr>
+                <tr><td><code>*.gif;*.png;*.jpg</code></td><td>GIF, PNG, JPG ファイルを除外</td></tr>
+                <tr><td><code>/img/*</code></td><td>http://example.com/img ディレクトリ以下を除外</td></tr>
+            </table>
+
+            <h3>オプション</h3>
+
+            <ul>
+                <li>[Not found ファイルを含める]: 404 エラーなどでアクセスできなかったファイルもサイトマップに含めます。</li>
+                <li>
+                    [ローカルファイルから作成]: ローカルファイルを元にサイトマップを生成します。
+                    [パス] テキストボックスに、サイトのホームページに相当するローカルファイルの場所を指定します。
+                </li>
+            </ul>
+
+            <h3>XML サイトマップ</h3>
+
+            <ul>
+                <li>[更新頻度]: XML サイトマップの <code>changefreq</code> タグに相当します。</li>
+                <li>[優先度]: XML サイトマップの <code>priority</code> タグに相当します。</li>
+                <li>[更新日時]: XML サイトマップの <code>lastmod</code> タグに相当します。</li>
+            </ul>
+
+            <h3>HTML サイトマップ</h3>
+
+            <ul>
+                <li>[ページタイトル]: 各ウェブページのタイトルとして使用する文字列を指定します。</li>
+            </ul>
+
+
+            <h2 id="templates">テンプレート</h2>
+
+            <p>
+                同梱されている <code>template.html</code> ファイルは HTML サイトマップのテンプレートファイルです。
+                自由に編集して構いません。
+            </p>
+
+            <p>
+                テンプレートファイルには、結果を挿入するための特別なタグを記述することができます。
+                次の表は利用可能なタグの一覧です。
+            </p>
+
+            <table>
+                <tr><th>Tag</th><th>Explaiation</th></tr>
+                <tr><td><code>&lt;%sitemap /&gt;</code></td><td>Sitemap</td></tr>
+                <tr><td><code>&lt;%home_title /&gt;</code></td><td>Title of home page</td></tr>
+                <tr><td><code>&lt;%date format="..." /&gt;</code></td><td>Date</td></tr>
+                <tr><td><code>&lt;%time format="..." /&gt;</code></td><td>Time</td></tr>
+            </table>
+
+            <p>
+                <code>&lt;%date&gt;</code>, <code>&lt;%time&gt;</code> タグの <code>format</code> 属性は日付または時刻の書式を指定します。
+                この書式指定は .NET と同じものです。
+                詳細は <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings">Custom Date and Time Format Strings</a>
+                をご覧ください。
+            </p>
+
+            <p>日付、時刻の書式指定の例をいくつか示します。</p>
+
+            <table>
+                <tr><th>Example</th><th>Result</th></tr>
+                <tr><td><code>&lt;%date format="MM-dd-yy" /&gt;</code></td><td>07-31-99</td></tr>
+                <tr><td><code>&lt;%date format="MMMM d, yyyy" /&gt;</code></td><td>July 31, 1999</td></tr>
+                <tr><td><code>&lt;%time format="hh:mm tt" /&gt;</code></td><td>03:05 PM</td></tr>
+                <tr><td><code>&lt;%time format="HH:mm.ss" /&gt;</code></td><td>15:05.25</td></tr>
+            </table>
+
+        </article>
+        <footer>
+            Copyright (c) 2012-2017 tnagao7. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>

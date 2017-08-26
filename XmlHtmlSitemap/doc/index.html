@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="default.css">
+    <title>XML&amp;HTML Sitemap Help</title>
+</head>
+<body>
+
+    <div id="container">
+
+        <header>
+            <h1>XML&amp;HTML Sitemap Help</h1>
+        </header>
+
+        <article>
+            <h2>Contents</h2>
+
+            <ol>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#usage">Usage</a></li>
+                <li><a href="#details">Details of each item</a></li>
+                <li><a href="#templates">Templates</a></li>
+            </ol>
+
+            <h2 id="overview">Overview</h2>
+
+            <p>
+                XML&amp;HTML Sitemap is a Windows application
+                for easily and simultaneously generating XML and HTML sitemaps.
+            </p>
+
+            <p>Generated XML files (sitemap.xml) conform to the
+                <a href="https://www.sitemaps.org/protocol.html">Sitemaps XML format</a>,
+                and thus you can submit them to services such as Google Webmaster Tools without change.
+                Generated HTML sitemaps (sitemap.html) can be freely altered and published in your websites.
+            </p>
+
+            <h2 id="features">Features</h2>
+
+            <ul>
+                <li>Sitemap generation from local files</li>
+                <li>Customizable template files for HTML sitemaps</li>
+            </ul>
+
+            <h2 id="usage">Usage</h2>
+
+            <p>Most operation can be done in the following main window.</p>
+
+            <img src="img/main-window.png" alt="screen shot" />
+
+            <h3>Basic</h3>
+
+            <p>Basic usage is as follows:</p>
+
+            <ol>
+                <li>Specify a <b>URL</b> of your website in the URL text box.</li>
+                <li>Specify a folder to save sitemaps in the <b>Save in</b> text box.</li>
+                <li>
+                    Turn on the following check boxes:
+                    <ol>
+                        <li><b>Generate sitemap.xml</b>: To generate an XML sitemap.</li>
+                        <li><b>Generate sitemap.html</b>: To generate an HTML sitemap.</li>
+                    </ol>
+                </li>
+                <li>Click <b>Run</b>, then sitemap generation executed.</li>
+            </ol>
+
+            <h3>Generating sitemaps from local files</h3>
+
+            <p>
+                Turning on the <b>Generate from local files</b> check box,
+                you can generate sitemaps from local files.
+                In this case, sitemaps is generated without accessing the actual website.
+                Addresses written in the sitemaps are the ones 
+                obtained by converting local file paths into
+                addresses based on the URL specified in the <b>URL</b> text box.
+            </p>
+
+            <h2 id="details">Details of each item</h2>
+
+            <p>This section explains the details of each setting item available in the main window.</p>
+
+            <h3>Basic items</h3>
+
+            <ul>
+                <li><b>URL</b>: Specifies a URL of a website to generate sitemaps. Begin with <code>http(s)://</code>.</li>
+                <li><b>Exclude</b>: Specifies patterns representing files and directories to be excluded from sitemaps. (Details are explained later.)</li>
+                <li><b>Encoding</b>: Specifies an encoding of web pages on the website.</li>
+                <li><b>Save in</b>: Specifies a folder to save sitemaps.</li>
+            </ul>
+
+            <p>
+                Wildcards are available for patterns written in the <b>Exclude</b> text box above.
+                The wildcard <code>*</code> represents an arbitrary string, and <code>?</code> represents an arbitrary character.
+                To specify multiple patterns, separate them with the <code>;</code> character.
+            </p>
+
+            <p>Here are some examples of patterns.
+            This example explains the case of generating sitemaps for http://example.com.</p>
+
+            <table>
+                <tr><th>Pattern</th><th>Explanation</th></tr>
+                <tr><td><code>*.gif;*.png;*.jpg</code></td><td>Exclude GIF, PNG, and JPG files</td></tr>
+                <tr><td><code>/img/*</code></td><td>Exclude the http://example.com/img directory </td></tr>
+            </table>
+
+            <h3>Options</h3>
+
+            <ul>
+                <li><b>Include not found files</b>: Includes files that cannot be accessed with errors such as 404 into sitemaps</li>
+                <li>
+                    <b>Generate from local files</b>: Generates sitemaps from local files.
+                    Specify in the <b>Path</b> text box the location of a local file corresponding to the home page of the site.
+                </li>
+            </ul>
+
+            <h3>XML Sitemaps</h3>
+
+            <ul>
+                <li><b>Change freq</b>: Corresponds to the <code>changefreq</code> tag of XML sitemaps.</li>
+                <li><b>Priority</b>: Corresponds to the <code>priority</code> tag of XML sitemaps.</li>
+                <li><b>Last mod</b>: Corresponds to the <code>lastmod</code> tag of XML sitemaps.</li>
+            </ul>
+
+            <h3>HTML Sitemaps</h3>
+
+            <ul>
+                <li><b>Pate title</b>: Specify a string to use as the title of each webpage.</li>
+            </ul>
+
+            <h2 id="templates">Templates</h2>
+
+            <p>The accompanied <code>template.html</code> file is a template file for HTML sitemaps.
+            You can freely edit the file as you like.</p>
+
+            <p>The template file may contain special tags for inserting results.
+            The table below shows the list of available special tags.</p>
+
+            <table>
+                <tr><th>Tag</th><th>Explanation</th></tr>
+                <tr><td><code>&lt;%sitemap /&gt;</code></td><td>Sitemap</td></tr>
+                <tr><td><code>&lt;%home_title /&gt;</code></td><td>Title of home page</td></tr>
+                <tr><td><code>&lt;%date format="..." /&gt;</code></td><td>Date</td></tr>
+                <tr><td><code>&lt;%time format="..." /&gt;</code></td><td>Time</td></tr>
+            </table>
+
+            <p>The <code>format</code> attribute of the <code>&lt;%date&gt;</code> and <code>&lt;%time&gt;</code> tags
+            specifies a format of date or time.
+            The format specification is common to the one of .NET.
+            See <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings">Custom Date and Time Format Strings</a> 
+            for details.</p>
+
+            <p>Here are some examples of date/time format specifications.</p>
+
+            <table>
+                <tr><th>Example</th><th>Result</th></tr>
+                <tr><td><code>&lt;%date format="MM-dd-yy" /&gt;</code></td><td>07-31-99</td></tr>
+                <tr><td><code>&lt;%date format="MMMM d, yyyy" /&gt;</code></td><td>July 31, 1999</td></tr>
+                <tr><td><code>&lt;%time format="hh:mm tt" /&gt;</code></td><td>03:05 PM</td></tr>
+                <tr><td><code>&lt;%time format="HH:mm.ss" /&gt;</code></td><td>15:05.25</td></tr>
+            </table>
+
+        </article>
+        <footer>
+            Copyright (c) 2012-2017 tnagao7. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
