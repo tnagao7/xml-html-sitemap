@@ -2,8 +2,7 @@
 
 ## Overview
 
-XML&HTML Sitemap is a Windows application 
-for easily and simultaneously generating XML and HTML sitemaps.
+XML&HTML Sitemap is a Windows application for generating XML and HTML sitemaps.
 
 Generated XML files (sitemap.xml) conform to the Sitemaps XML format, 
 and thus you can submit them to services such as Google Webmaster Tools without change. 
