@@ -27,13 +27,13 @@ Generated HTML sitemaps (sitemap.html) can be freely altered and published in yo
 3. Turn on the following check boxes:
   - **Generate sitemap.xml**: To generate an XML sitemap.
   - **Generate sitemap.html**: To generate an HTML sitemap.
-4. Click **Run**, then sitemap generation executed.
+4. Click **Run**, then sitemap generation is executed.
 
-Turning on the Generate from local files check box, 
+Turning on the **Generate from local files** check box, 
 you can generate sitemaps from local files. 
 In this case, sitemaps is generated without accessing the actual website. 
 
-For more information, see the HTML documentation (XmlHtmlSitemap/doc/index.html).
+For more information, read the HTML documentation (XmlHtmlSitemap/doc/index.html).
 
 ## Third Party Notices
 
