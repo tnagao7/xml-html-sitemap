@@ -476,7 +476,7 @@ namespace XmlHtmlSitemap.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://github.com/tnagao7/xml-html-sitemap.
+        ///   Looks up a localized string similar to https://github.com/wgag/xml-html-sitemap.
         /// </summary>
         internal static string URL {
             get {

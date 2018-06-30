@@ -8,7 +8,7 @@ Generated XML files (sitemap.xml) conform to the [Sitemaps XML format](https://w
 and thus you can submit them to services such as Google Webmaster Tools without change. 
 Generated HTML sitemaps (sitemap.html) can be freely altered and published in your websites.
 
-![screen shot](https://github.com/tnagao7/xml-html-sitemap/raw/master/XmlHtmlSitemap/doc/img/main-window.png)
+![screen shot](https://github.com/wgag/xml-html-sitemap/raw/master/XmlHtmlSitemap/doc/img/main-window.png)
 
 ## Features
 
@@ -41,4 +41,4 @@ This program uses the following third-party libraries.
 
 * [Html Agility Pack](http://html-agility-pack.net/)
 
-For license information, refer to [THIRDPARTY.txt](THIRDPARTY.txt).
+For license information, refer to [THIRD-PARTY-NOTICES](THIRD-PARTY-NOTICES).

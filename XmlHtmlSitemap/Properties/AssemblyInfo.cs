@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("XML&HTML Sitemap")]
-[assembly: AssemblyCopyright("Copyright (c) 2012-2017 tnagao7")]
+[assembly: AssemblyCopyright("Copyright (c) 2012-2017 wgag")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
